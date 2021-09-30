@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../styles/Media.styled';
 
 export const OurMenuContainer = styled.div`
   background-color: #f8f8f8;
@@ -13,90 +14,43 @@ export const OurMenuContainer = styled.div`
   }
 `;
 
-export const Column1 = styled.div`
-  width: 30%;
+export const Column = styled.div`
+  width: ${({ width }) => (width ? width : '30%')};
   float: left;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
-  @media screen and (max-width: 800px) {
+  border-left: ${({ borderLeft }) => (borderLeft ? borderLeft : 'none')};
+  border-right: ${({ borderRight }) => (borderRight ? borderRight : 'none')};
+  overflow: ${({ overflow }) => (overflow ? overflow : '')};
+  ${media.mediumDevice`
     width: 50%;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-`;
-
-export const Column2 = styled.div`
-  width: 20%;
-  float: left;
-  border-left: 1px solid #adb5bd;
-  border-right: 1px solid #adb5bd;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  align-items: center;
-  overflow: hidden;
-  @media screen and (max-width: 800px) {
-    width: 50%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-`;
-
-export const Column3 = styled.div`
-  width: 20%;
-  float: left;
-  border-right: 1px solid #adb5bd;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  align-items: center;
-  overflow: hidden;
-  @media screen and (max-width: 800px) {
-    width: 50%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-`;
-
-export const Column4 = styled.div`
-  width: 30%;
-  float: left;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  align-items: center;
-  overflow: hidden;
-  @media screen and (max-width: 800px) {
-    width: 50%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  `}
 `;
 
 export const Header1 = styled.h1`
   font-weight: 600;
   margin-top: 187px;
-  @media screen and (max-width: 800px) {
+
+  ${media.mediumDevice`
     font-size: 18px;
     text-align: center;
-  }
+  `}
 `;
 export const Header2 = styled.h1`
   font-weight: 600;
   margin-top: 319px;
   margin-left: -10%;
-  @media screen and (max-width: 800px) {
+  ${media.mediumDevice`
     font-size: 18px;
     text-align: center;
     margin-top: 120px;
     margin-left: 0%;
-  }
+  `}
 `;
 export const Header3 = styled.h1`
   font-weight: 600;

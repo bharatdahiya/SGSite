@@ -3,10 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {
   OurMenuContainer,
-  Column1,
-  Column2,
-  Column3,
-  Column4,
+  Column,
   Header1,
   Header2,
   Header3,
@@ -18,7 +15,7 @@ const Menu = () => {
   AOS.init();
   return (
     <OurMenuContainer className='row' id='ourmenu'>
-      <Column1>
+      <Column>
         <div
           data-aos='slide-up'
           data-aos-easing='linear'
@@ -46,8 +43,13 @@ const Menu = () => {
             />
           </div>
         </div>
-      </Column1>
-      <Column2>
+      </Column>
+      <Column
+        width='20%'
+        borderRight='1px solid #adb5bd'
+        borderLeft='1px solid #adb5bd'
+        overflow='hidden'
+      >
         <div
           data-aos='slide-down'
           data-aos-easing='linear'
@@ -67,8 +69,8 @@ const Menu = () => {
             containerMarTop='50%'
           />
         </div>
-      </Column2>
-      <Column3>
+      </Column>
+      <Column width='20%' overflow='hidden' borderRight='1px solid #adb5bd'>
         <div
           data-aos='slide-up'
           data-aos-easing='linear'
@@ -88,8 +90,8 @@ const Menu = () => {
             containerMarTop='50%'
           />
         </div>
-      </Column3>
-      <Column4>
+      </Column>
+      <Column width='30%' overflow='hidden'>
         <div
           data-aos='slide-down'
           data-aos-easing='linear'
@@ -117,7 +119,7 @@ const Menu = () => {
             />
           </div>
         </div>
-      </Column4>
+      </Column>
     </OurMenuContainer>
   );
 };

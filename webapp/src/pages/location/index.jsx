@@ -8,9 +8,6 @@ import {
   LocationHeader,
   Address,
   LocationIcon,
-  //   Heading1,
-  //   Heading2,
-  //   Subtitle,
 } from './index.styled';
 import map from '../../assets/map.png';
 import locationIcon from '../../assets/location-icon.png';

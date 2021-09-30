@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../styles/Media.styled';
 
 export const LocationContainer = styled.div`
   background: #0c0c0c;
@@ -21,9 +22,9 @@ export const LocationContainer = styled.div`
     z-index: 2;
   }
 
-  @media screen and (max-width: 480px) {
+  ${media.mobileDevice`
     height: 230px;
-  }
+  `}
 `;
 
 export const MapBackground = styled.div`
@@ -63,24 +64,13 @@ export const WhiteDiv = styled.div`
   margin-left: -555px;
   margin-top: -163px;
 
-  @media screen and (max-width: 480px) {
+  ${media.mobileDevice`
     position: absolute;
     height: 50px;
     width: 104px;
     margin-left: 0px;
     margin-top: -85px;
-  }
-
-  @media screen and(max-width:400px) {
-    position: absolute;
-    height: 50px;
-    width: 104px;
-    margin-left: -171px;
-    margin-top: -94px;
-  }
-  @media screen and (min-width: 481px) and (max-width: 800px) {
-    margin-left: 0px;
-  }
+  `}
 `;
 
 export const LocationIcon = styled.img`
